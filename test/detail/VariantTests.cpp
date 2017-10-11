@@ -15,7 +15,6 @@ namespace {
 
 template <std::size_t N>
 struct X {
-  X() {}
   X(const std::string &x)
       : value(x) {}
 
@@ -27,11 +26,6 @@ struct X {
 template <std::size_t N>
 bool operator==(const X<N> &x1, const X<N> &x2) {
   return x1.value == x2.value;
-}
-
-template <std::size_t N>
-bool operator!=(const X<N> &x1, const X<N> &x2) {
-  return x1.value != x2.value;
 }
 
 using A = X<5>;
